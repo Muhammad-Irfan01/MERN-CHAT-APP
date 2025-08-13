@@ -1,4 +1,4 @@
-import { Eye, EyeClosed, Lock, Mail, MessageSquare } from "lucide-react";
+import { Eye, EyeClosed, Loader2, Lock, Mail, MessageSquare } from "lucide-react";
 import React, { useState } from "react";
 import { useAuthStore } from "../Store/useAuthStore";
 import { Link } from "react-router-dom";
@@ -33,7 +33,6 @@ const LogIn = () => {
         </div>
         <form
           method="post"
-          onSubmit={handleLogIn}
           className="w-full flex flex-col space-y-4"
         >
           <div className="space-y-1">
@@ -93,6 +92,7 @@ const LogIn = () => {
               type="submit"
               className="btn w-full btn-primary"
               disabled={isLoggingIn}
+              onClick={handleLogIn}
             >
               {isLoggingIn ? (
                 <>

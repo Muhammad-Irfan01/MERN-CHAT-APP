@@ -135,7 +135,6 @@ const Signup = () => {
               type="submit"
               className="btn w-full btn-primary"
               disabled={isSigningUp}
-              // onClick={handleSignUp}
             >
               {isSigningUp ? (
                 <>
